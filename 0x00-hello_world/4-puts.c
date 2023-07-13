@@ -1,5 +1,6 @@
 #include <stdio.h>
 /**
+ * main - does something
  * Description: Idk man
  * I DONT KNOW
  * WHAT
