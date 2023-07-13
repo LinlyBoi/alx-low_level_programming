@@ -1,9 +1,11 @@
 #include <stdio.h>
 /**
+ * Description: Idk man
  * I DONT KNOW
  * WHAT
  * YOU
  * WANT
+ * Return: 0 on success
  */
 int main(void)
 {
