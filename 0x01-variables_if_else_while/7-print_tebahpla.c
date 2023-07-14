@@ -10,10 +10,10 @@
  */
 int main(void)
 {
-	int num;
+	char rettel;
 
-	for (num = 0; num < 10; num++)
-		putchar('0' + num);
+	for (rettel = 'z'; rettel >= 'a'; rettel--)
+		putchar(rettel);
 
 	putchar('\n');
 	return (0);
