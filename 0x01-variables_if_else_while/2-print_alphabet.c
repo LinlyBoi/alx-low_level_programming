@@ -17,6 +17,5 @@ int main(void)
 	for (index = 0; index < size; index++)
 		putchar(alphabet[index]);
 
-	putchar('\n');
 	return (0);
 }
