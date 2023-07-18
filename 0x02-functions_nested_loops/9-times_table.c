@@ -14,7 +14,7 @@ void times_table(void)
 		for (multiplicant = 0; multiplicant < 10; multiplicant++)
 		{
 			result = current_num * multiplicant;
-			if (result < 10)
+			if (result + current_num < 10)
 			{
 				_putchar((result) + '0');
 
