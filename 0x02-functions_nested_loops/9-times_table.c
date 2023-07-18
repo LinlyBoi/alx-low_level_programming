@@ -5,18 +5,27 @@
  * Returns: VOID
  */
 
-void times_table()
+void times_table(void)
 {
-	int current_num, multiplicant;
+	int current_num, multiplicant, int result;
 
 	for (current_num = 0; current_num < 10; current_num++)
 	{
 		for (multiplicant = 0; multiplicant < 10; multiplicant++)
 		{
-			_putchar((current_num * current_num) + '0');
+			result = current_num * multiplicant;
+			if (result < 10)
+				_putchar((result) + '0');
+			else
+			{
+			_putchar((result / 10) + '0');
+			_putchar((result % 10) + '0');
+			}
+
 			_putchar(',');
 			_putchar(' ');
 			_putchar(' ');
 		}
+		_putchar('\n');
 	}
 }
