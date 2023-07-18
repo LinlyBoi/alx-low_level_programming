@@ -15,7 +15,10 @@ void times_table(void)
 		{
 			result = current_num * multiplicant;
 			if (result < 10)
+			{
 				_putchar((result) + '0');
+				_putchar(' ');
+			}
 			else
 			{
 			_putchar((result / 10) + '0');
@@ -23,7 +26,6 @@ void times_table(void)
 			}
 
 			_putchar(',');
-			_putchar(' ');
 			_putchar(' ');
 		}
 		_putchar('\n');
