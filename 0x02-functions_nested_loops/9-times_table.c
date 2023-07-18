@@ -7,7 +7,7 @@
 
 void times_table(void)
 {
-	int current_num, multiplicant,result;
+	int current_num, multiplicant, result;
 
 	for (current_num = 0; current_num < 10; current_num++)
 	{
@@ -18,15 +18,16 @@ void times_table(void)
 			{
 				_putchar((result) + '0');
 				_putchar(' ');
+				_putchar(' ');
 			}
 			else
 			{
-			_putchar((result / 10) + '0');
-			_putchar((result % 10) + '0');
+				_putchar((result / 10) + '0');
+				_putchar((result % 10) + '0');
+				_putchar(' ');
 			}
 
 			_putchar(',');
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}
