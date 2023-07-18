@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_last_digit - %10
  * Description: 1001? nah 1
@@ -7,7 +8,9 @@
  */
 int print_last_digit(int n)
 {
-	int last = _abs(n) % 10;
+	int last;
+
+	last  = _abs(n) % 10;
 
 	_putchar(last + '0');
 	return (last);
@@ -21,10 +24,8 @@ int print_last_digit(int n)
  */
 int _abs(int n)
 {
-	if (n > 0)
+	if (n >= 0)
 		return (n);
-	else if (n == 0)
-		return (0);
 	else
 		return (-n);
 }
