@@ -8,10 +8,6 @@
 #include <wchar.h>
 int main(void)
 {
-	int i;
-
-	char str[] = "_putchar";
-	int size = sizeof(str);
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');
