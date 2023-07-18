@@ -5,7 +5,6 @@
  * Return: 0 (I'm the best)
  *
  */
-#include <wchar.h>
 int main(void)
 {
 	_putchar('_');
@@ -16,6 +15,7 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
+	_putchar('\n');
 
 	return (0);
 }
