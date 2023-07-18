@@ -1,18 +1,11 @@
 #include "main.h"
+
 /**
- * main - alphabet
- * Description: prints out _putchar
- * Return: 0 (I'm the best)
- *
+ * print_alphabet - Yeah?
+ * Description: it does what it should do
+ * Return: void
  */
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-void print_alphabet()
+void print_alphabet(void)
 {
 	char letter;
 
