@@ -7,8 +7,22 @@
  */
 int print_last_digit(int n)
 {
-	int last = n % 10;
+	int last = _abs(n) % 10;
 
 	_putchar(last + '0');
 	return (last);
+}
+
+/**
+ * _abs - no -ve
+ * Description: "-" >:( -> ""
+ * @n: the number
+ * Return: number without the "-" if exists
+ */
+int _abs(int n)
+{
+	if (n >= 0)
+		return (n);
+	else
+		return (-n);
 }
