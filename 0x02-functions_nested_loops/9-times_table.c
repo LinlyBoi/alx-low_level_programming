@@ -14,31 +14,23 @@ void times_table(void)
 		for (multiplicant = 0; multiplicant < 10; multiplicant++)
 		{
 			result = current_num * multiplicant;
-			if (result + current_num < 10)
+
+			if (multiplicant == 0)
+				_putchar(result + '0');
+
+			else if (result < 10)
 			{
-				_putchar((result) + '0');
-
-				if (multiplicant != 9)
-				{
-
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(result + '0');
 			}
 			else
 			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar((result / 10) + '0');
 				_putchar((result % 10) + '0');
-
-				if (multiplicant != 9)
-				{
-
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
 			}
 
 		}
