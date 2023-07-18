@@ -10,14 +10,16 @@ int main(void)
 {
 	int i;
 
-	char str[] = "_putchar\n";
+	char str[] = "_putchar";
 	int size = sizeof(str);
-
-	for (i = 0; i < size; i++)
-	{
-		_putchar(str[i]);
-	}
-
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 
 	return (0);
 }
