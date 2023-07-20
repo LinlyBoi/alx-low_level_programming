@@ -8,9 +8,9 @@
 void print_diagonal(int n)
 {
 	if (n <= 0)
+	{
 		_putchar('\n');
-
-	else
+	} else
 	{
 		int i, j;
 
@@ -18,18 +18,12 @@ void print_diagonal(int n)
 		{
 			for (j = 0; j < n; j++)
 			{
-				switch (j)
-				{
-					case 1:
-						_putchar('\\');
-						break;
-					default:
-						_putchar(' ');
-				}
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
 			}
 			_putchar('\n');
 		}
 	}
-
-
 }
