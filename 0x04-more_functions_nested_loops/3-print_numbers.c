@@ -1,5 +1,5 @@
 /**
- * print_numbers: numbers mason
+ * print_numbers - numbers mason
  * Description: What do they mean?
  * Return: VOID
  */
