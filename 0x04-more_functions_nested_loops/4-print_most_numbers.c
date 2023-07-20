@@ -20,6 +20,7 @@ void print_most_numbers(void)
 				break;
 			default:
 				_putchar('0' + i);
+				break;
 		}
 
 	}
