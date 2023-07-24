@@ -9,17 +9,17 @@ void rev_string(char *s)
 {
 
 	int idx, tail;
-	char *rev;
 
 	for (idx = 0; *(s + idx) != '\0'; idx++)
 		;
-
 	idx--;
-	tail = idx;
-	rev = s;
+	tail = 0;
 
-	for (idx = 0; idx <= tail; idx++)
-		rev[idx] = *(s + tail - idx);
-
-	s = rev;
+	for (; idx >= 0; idx--)
+	{
+		*(s + tail + idx) = *(s + tail) + *(s + tail - idx);
+		*(s + tail) = *(s + tail - idx) - *(s + tail);
+		*(s + tail + idx) = *(s + tail - idx) - *(s + tail);
+		tail++;
+	}
 }
