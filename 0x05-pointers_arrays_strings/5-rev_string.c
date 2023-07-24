@@ -18,5 +18,5 @@ void rev_string(char *s)
 	clone = s;
 
 	for (; idx >= 0; idx--)
-		s[idx] = clone[tail++];
+		s[tail++] = clone[idx];
 }
