@@ -15,4 +15,6 @@ void print_rev(char *s)
 
 	for (; idx >= 0; idx--)
 		_putchar(*(s + idx));
+
+	_putchar('\n');
 }
