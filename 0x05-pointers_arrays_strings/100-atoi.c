@@ -1,5 +1,6 @@
 #include "main.h"
-/** _atoi - atoi at home
+/**
+ * _atoi - atoi at home
  * @s: String to convert
  * Return: Integer form of string
  */
