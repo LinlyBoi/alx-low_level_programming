@@ -3,6 +3,7 @@
  * _strcpy - strcpy at home
  * @dest: destination to copy
  * @src: what we copying
+ * Return: pointer to copied destination
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -12,7 +13,7 @@ char *_strcpy(char *dest, char *src)
 	for (; *(src + len) != '\0'; len++)
 		;
 
-	for(idx = 0; idx < len; idx++)
+	for (idx = 0; idx < len; idx++)
 		*(dest + idx) = *(src + idx);
 	*(dest + len) = '\0';
 
