@@ -17,9 +17,9 @@ void rev_string(char *s)
 
 	for (; idx >= 0; idx--)
 	{
-		*(s + tail + idx) = *(s + tail) + *(s + tail - idx);
-		*(s + tail) = *(s + tail - idx) - *(s + tail);
-		*(s + tail + idx) = *(s + tail - idx) - *(s + tail);
+		*(s + tail + idx) = *(s + tail) + *(s + tail + idx);
+		*(s + tail) = *(s + tail + idx) - *(s + tail);
+		*(s + tail + idx) = *(s + tail + idx) - *(s + tail);
 		tail++;
 	}
 }
