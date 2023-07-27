@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strncat - strcat but limited
+ * _strncat - strcat but limited
  * @src: the thing we adding
  * @dest: the thing we adding to
  * @n: how many of src we adding
