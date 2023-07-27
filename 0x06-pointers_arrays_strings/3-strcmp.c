@@ -8,20 +8,13 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int idx, sum;
-
-	sum = 0;
-	idx = 0;
-	while (*(s2 + idx) != '\0' && *(s1 + idx) != '\0')
+	while(*s1 == *s2)
 	{
-		if (*(s2 + idx) == '\0')
-			sum += *(s1 + idx);
-		else if (*(s1 + idx) == '\0')
-			sum -= *(s2 + idx);
-		else
-			sum += *(s1 + idx) - *(s2 + idx);
-		idx++;
+		if (*s1 == '\0')
+			return (0);
+		s1++;
+		s2++;
 	}
 
-	return (sum);
+	return (*s1 - *s2);
 }
