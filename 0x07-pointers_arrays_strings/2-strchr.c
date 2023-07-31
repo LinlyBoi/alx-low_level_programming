@@ -6,7 +6,7 @@
  * @c: charcter to find
  * Return: returns pointer to char or NULL if not exist
  */
-char *_strchar(char *s, char c)
+char *_strchr(char *s, char c)
 {
 	unsigned int i;
 
