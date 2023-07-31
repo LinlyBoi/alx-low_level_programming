@@ -38,14 +38,14 @@ unsigned int _strspn(char *s, char *accept)
 	sum = 0;
 
 	while (1)
-		{
-			i = *s++;
-			if (_strchr(accept, i) != NULL)
-				sum++;
-			else
-				break;
-			if (i == 0)
-				break;
-		}
-	return sum;
+	{
+		i = *s++;
+		if (_strchr(accept, i) != NULL)
+			sum++;
+		else
+			break;
+		if (i == 0)
+			break;
+	}
+	return (sum);
 }
