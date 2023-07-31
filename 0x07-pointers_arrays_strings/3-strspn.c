@@ -43,6 +43,8 @@ unsigned int _strspn(char *s, char *accept)
 		i = *s++;
 		if (_strchr(accept, i) != NULL)
 			sum++;
+		else
+			break;
 	}
 	return (sum);
 }
