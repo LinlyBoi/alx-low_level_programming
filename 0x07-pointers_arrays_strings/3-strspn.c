@@ -36,16 +36,13 @@ unsigned int _strspn(char *s, char *accept)
 	char i;
 
 	sum = 0;
+	i = *s;
 
-	while (1)
+	while (i != '\0')
 	{
 		i = *s++;
 		if (_strchr(accept, i) != NULL)
 			sum++;
-		else
-			break;
-		if (i == 0)
-			break;
 	}
 	return (sum);
 }
