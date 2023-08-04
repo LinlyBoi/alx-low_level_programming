@@ -34,8 +34,8 @@ int numerate(char *s)
 	{
 		if (*s >= '0' && *s <= '9')
 		{
-			sum += *s - '0';
 			sum *= 10;
+			sum += *s - '0';
 			s++;
 		}
 		else
