@@ -27,9 +27,17 @@ int main(int argc, char *argv[])
  */
 int numerate(char *s)
 {
-	int sum;
+	int sum, flag;
 
 	sum = 0;
+	flag = 0;
+
+	if (*s == '-')
+	{
+		flag = 1;
+		s++;
+	}
+
 	while (*s)
 	{
 		if (*s >= '0' && *s <= '9')
@@ -42,5 +50,9 @@ int numerate(char *s)
 			break;
 
 	}
+
+	if (flag)
+		sum = -sum;
+
 	return (sum);
 }
