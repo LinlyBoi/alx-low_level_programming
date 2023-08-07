@@ -12,20 +12,18 @@ char *str_concat(char *s1, char *s2)
 	char *str;
 	int i, size;
 
-	size = 0;
 	if (s1 == NULL)
 		s1 = "";
-	else
-		size++;
 	if (s2 == NULL)
 		s2 = "";
-	else
-		size++;
 
+	size = 0;
 	while (*(s1 + size))
 		size++;
+	size++;
 	while (*(s2 + size))
 		size++;
+	size++;
 
 	if (size > 0)
 		str = malloc(size * sizeof(char));
