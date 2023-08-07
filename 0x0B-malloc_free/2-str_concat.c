@@ -32,9 +32,9 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	i = 0;
-	while (*s1)
+	while (*s1 != '\0')
 		*(str + i++) = *(s1++);
-	while (*s2)
+	while (*s2 != '\0')
 		*(str + i++) = *(s2++);
 
 	*(str + i) = '\0';
