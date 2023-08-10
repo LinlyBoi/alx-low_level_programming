@@ -13,6 +13,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *chonky;
 	unsigned int i, j, size;
 
+	size = 0;
 	if (s1)
 		size += sizeof(*s1);
 	if (s2)
