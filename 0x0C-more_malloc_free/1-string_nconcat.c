@@ -11,12 +11,16 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *chonky;
-	unsigned int i, j;
+	unsigned int i, j, size;
 
-	if (n <= sizeof(*s2))
+	if (s1)
+		size += sizeof(*s1);
+	if (s2)
+		size += sizeof(*s2);
+	if (s2 && n <= sizeof(*s2))
 		chonky = malloc(sizeof(*s1) + n);
 	else
-		chonky = malloc(sizeof(*s1) + sizeof(*s2) - 1);
+		chonky = malloc(size - 1);
 
 	if (chonky)
 	{
