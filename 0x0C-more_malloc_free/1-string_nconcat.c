@@ -36,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 				*(chonky + i++) = *(s2 + j);
 		}
 
-                *(chonky + i) = '\0';
+		*(chonky + i) = '\0';
 		return (chonky);
 	}
 	else
