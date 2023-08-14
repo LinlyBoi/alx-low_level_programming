@@ -14,11 +14,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *da_dog;
 
 	da_dog = malloc(sizeof(dog_t));
-	if (!da_dog)
-		return (NULL);
+	new_name = malloc(sizeof(name));
+	new_owner = malloc(sizeof(owner));
 
-	new_name = _strdup(name);
-	new_owner = _strdup(owner);
+	if (!da_dog && !new_name && !new_owner)
+		return (NULL);
+	new_name = _strcpy(new_name, name);
+	new_owner = _strcpy(new_owner, owner);
 
 	da_dog->name = new_name;
 	da_dog->owner = new_owner;
@@ -26,32 +28,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (da_dog);
 }
-
 /**
- * _strdup - strdup at home
- * @str: String to duplicate
- * Return: pointer to new String or NULL if you're poor
+ * _strcpy - strcpy at home
+ * @dest: destination to copy
+ * @src: what we copying
+ * Return: pointer to copied destination
  */
-char *_strdup(char *str)
+char *_strcpy(char *dest, char *src)
 {
-	char *arr;
-	int i, size;
+	int idx, len;
 
-	if (str == NULL)
-		return (NULL);
+	len = 0;
+	for (; *(src + len) != '\0'; len++)
+		;
 
-	size = 0;
-	while (*(str + size))
-		size++;
+	for (idx = 0; idx < len; idx++)
+		*(dest + idx) = *(src + idx);
+	*(dest + len) = '\0';
 
-	size++;
-	arr = malloc(sizeof(char) * size);
-	if (arr == NULL)
-		return (NULL);
-
-	i = 0;
-	while (*str)
-		*(arr + i++) = *(str++);
-
-	return (arr);
+	return (dest);
 }
