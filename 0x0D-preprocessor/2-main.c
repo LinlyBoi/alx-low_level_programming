@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-	puts(__FILE_NAME__);
-	printf("\n");
+	printf("%s\n", __FILE__);
 	return (0);
 }
