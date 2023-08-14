@@ -14,16 +14,26 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *da_dog;
 
 	da_dog = malloc(sizeof(dog_t));
-	new_name = malloc(sizeof(name));
-	new_owner = malloc(sizeof(owner));
-
-	if (!da_dog && !new_name && !new_owner)
+	if (!da_dog)
 		return (NULL);
-	new_name = _strcpy(new_name, name);
-	new_owner = _strcpy(new_owner, owner);
 
-	da_dog->name = new_name;
-	da_dog->owner = new_owner;
+	da_dog->name = malloc((_strlen(name) + 1) * sizeof(char));
+	if (!da_dog->name)
+	{
+		free(da_dog);
+		return (NULL);
+	}
+
+	da_dog->owner = malloc((_strlen(owner) + 1) * sizeof(char));
+	if (!da_dog->owner)
+	{
+		free(da_dog->name);
+		free(da_dog);
+		return (NULL);
+	}
+
+	_strcpy(da_dog->name, name);
+	_strcpy(da_dog->owner, owner);
 	da_dog->age = age;
 
 	return (da_dog);
@@ -47,4 +57,18 @@ char *_strcpy(char *dest, char *src)
 	*(dest + len) = '\0';
 
 	return (dest);
+}
+/**
+ * _strlen - length of string
+ * @str: String to get length
+ * Return: Length of string
+ */
+unsigned int _strlen(char *str)
+{
+	unsigned int len;
+
+	len = 0;
+	for (; *(str + len) != '\0'; len++)
+		;
+	return (len);
 }
