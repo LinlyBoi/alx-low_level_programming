@@ -1,6 +1,7 @@
 #ifndef __MAIN__
 #define __MAIN__
 typedef struct dog dog;
+typedef struct dog dog_t;
 /**
  * struct dog - what da dog doin
  * @name: name of dog
