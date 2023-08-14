@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - file name
@@ -7,6 +6,7 @@
  */
 int main(void)
 {
-	printf("%s\n", __FILE_NAME__);
+	printf("%s", __FILE_NAME__);
+	printf("\n");
 	return (0);
 }
