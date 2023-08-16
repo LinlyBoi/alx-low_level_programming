@@ -1,6 +1,6 @@
 
-#ifndef __MAIN__
-#define __MAIN__
+#ifndef CALC_H
+#define CALC_H
 #include <stdlib.h>
 #include <stdio.h>
 /**
