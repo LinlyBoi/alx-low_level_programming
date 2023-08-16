@@ -41,7 +41,7 @@ int op_div(int a, int b)
 	return (a / b);
 }
 /**
- * op_div - returns remainder division
+ * op_mod - returns remainder division
  * @a: num1
  * @b: num2
  * Return: a % b
