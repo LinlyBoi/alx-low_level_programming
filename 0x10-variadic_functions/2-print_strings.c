@@ -8,25 +8,26 @@
  * @n: number of strings
  * @...: strings
  */
- void print_strings(const char *separator, const unsigned int n, ...)
- {
-	 va_list words;
-	 int idx;
-	 char *next;
+void print_strings(const char *separator, const unsigned int n, ...)
+{
+	va_list words;
+	int idx;
+	char *next;
 
-	 for (idx = 0; idx < n; idx++)
-	 {
-		 next = va_arg(words, char*);
-		 if (!next)
-			 next = "(nil)";
-		 if (!separator)
-			 printf("%s", next);
-		 else if (separator && idx == 0)
-		 {
-			 printf("%s", next);
+	for (idx = 0; idx < n; idx++)
+	{
+		next = va_arg(words, char *);
 
-		 }
-		 else
-			 printf("%s%s", separator, next);
-	 }
- }
+		if (!next)
+			next = "(nil)";
+
+		if (!separator)
+			printf("%s", next);
+
+		else if (separator && idx == 0)
+			printf("%s", next);
+
+		else
+			printf("%s%s", separator, next);
+	}
+}
