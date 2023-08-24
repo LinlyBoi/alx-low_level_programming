@@ -21,7 +21,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		temp = *head;
-		while(temp->next)
+		while (temp->next)
 			temp = temp->next;
 		temp->next = new_tail;
 	}
