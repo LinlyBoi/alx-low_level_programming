@@ -2,23 +2,17 @@
 #include <stdio.h>
 
 /**
- * _strlen - Takes string and return its length
+ * print_list - prints the whole list
  *
- * @str: Address to the head of the string (Array of Characters) (Lost btw)
- *
- * Return: Length of String
- */
-
-/**
- * print_list - printing a list
  * @h: list to print elements of
+ * Return: number of nodes
  */
 size_t print_list(const list_t *h)
 {
 	if (h)
 	{
-		printf("[%i] %s\n", h->str ? h->len : 0, h->str ? h->str: "(nil)");
-		return 1 + print_list(h->next);
+		printf("[%i] %s\n", h->str ? h->len : 0, h->str ? h->str : "(nil)");
+		return (1 + print_list(h->next));
 	}
 	else
 		return (0);
