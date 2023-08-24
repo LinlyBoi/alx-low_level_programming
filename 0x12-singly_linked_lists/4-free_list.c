@@ -6,9 +6,9 @@
  */
 void free_list(list_t *head)
 {
-    if (!head)
-        return;
-    free_list(head->next);
+	if (!head)
+		return;
+	free_list(head->next);
 	free(head->str);
-    free(head);
+	free(head);
 }
