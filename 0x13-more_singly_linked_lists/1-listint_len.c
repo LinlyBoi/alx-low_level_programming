@@ -5,10 +5,10 @@
  * @h: list in question
  * Return: number of elements in list
  */
-size_t list_lenint(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
 	if (h)
-		return (1 + list_lenint(h->next));
+		return (1 + listint_len(h->next));
 	else
 		return (0);
 }
