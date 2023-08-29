@@ -7,22 +7,23 @@
  * @n: value to insert
  * Return: address to new node or NULL
  */
-listint_t *insert_nodeint_index(listint_t **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *current, *new_node;
 	unsigned int i;
 
 	new_node = malloc(sizeof(listint_t));
 	if (!new_node)
-		return NULL;
+		return (NULL);
 
 	current = *head;
 	for (i = 0; i < idx - 1 && current; i++)
 		current = current->next;
 
 	if (!current)
-		return NULL;
+		return (NULL);
 
+	new_node->n = n;
 	new_node->next = current->next;
 	current->next = new_node;
 	return (new_node);
