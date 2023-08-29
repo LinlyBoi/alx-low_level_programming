@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
  * pop_listint - pop
  * @head: pointer to head of list
  * Return: value of node popped
