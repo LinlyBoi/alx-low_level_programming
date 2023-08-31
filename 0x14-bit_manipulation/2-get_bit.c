@@ -15,7 +15,7 @@ int get_bit(unsigned long n, unsigned int index)
 	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
 		;
 	/* check if user is dumb */
-	if (index > shifts)
+	if (index > 64)
 		return (-1);
 	/* fr fr */
 	return ((n >> index) & 1);
