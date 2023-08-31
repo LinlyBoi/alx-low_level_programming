@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * binary_to_uint - convert binary to unsigned int
@@ -7,29 +8,23 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	while(*(b + i))
+	unsigned int sum, power;
+	int len;
+
+	if (b == NULL)
+		return (0);
+
+	for (len = 0; b[len]; len++)
 	{
-		if (!(*(b + i) == '0' ||*(b + i) == '1'))
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
 	}
-	return (resolve_binary(b, 0));
 
-}
+	for (power = 1, sum = 0, len--; len >= 0; len--, power *= 2)
+	{
+		if (b[len] == '1')
+			sum += power;
+	}
 
-unsigned int resolve_binary(const char *b, unsigned int power)
-{
-	if (!*b)
-		return (0);
-	if (*b == '1')
-		return (pow(2, power) + resolve_binary(b+1,  power+1));
-	if (*b == '0')
-		return (resolve_binary(b+1, power+1))
-}
-
-unsigned int pow(unsigned int base , unsigned int power)
-{
-	if (power == 0)
-		return (1);
-	return (base * pow(base, power - 1));
+	return (sum);
 }
