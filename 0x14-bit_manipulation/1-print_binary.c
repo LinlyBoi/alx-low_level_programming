@@ -6,13 +6,23 @@
  */
 void print_binary(long n)
 {
-	unsigned int shifts, temp;
+	unsigned long int temp;
+	int shifts;
 
-	temp = n;
-	for (shifts = 0; temp > 0; shifts++)
-		temp = temp >> 1;
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
 
-	/* (n >> 1) & 1 */
-	for (temp = shifts; temp > 0; temp--)
-		((n >> temp) & 1) ? _putchar('1') : _putchar('0');
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+		;
+
+	for (; shifts >= 0; shifts--)
+	{
+		if ((n >> shifts) & 1)
+			_putchar('1');
+		else
+			_putchar('0');
+	}
 }
